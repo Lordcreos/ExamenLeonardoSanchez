@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ExamenLeonardoSanchez.Registro">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#67FFF0">
+
+              
+            <Label x:Name="lblUser" Text="Usuario Conectado : " />
+            <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="40"></Label>
+
+            <Label Text="Datos del estudiante" TextColor="Blue" FontSize="18"></Label>
+
+            <Grid  BackgroundColor="#38B6FF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    
+
+
+                </Grid.ColumnDefinitions>
+                <Entry  TextColor="White" Grid.Column="0" x:Name="txtEstudiante" Keyboard="Text"
+                  PlaceholderColor="White" Placeholder="Ingrese Nombre"></Entry>
+                <Entry  TextColor="White" Grid.Column="1" x:Name="txtAbono" Keyboard="Numeric"
+                      PlaceholderColor="White" Placeholder="Ingrese monto inicial"></Entry>
+            </Grid>
+            <Grid BackgroundColor="#8C52FF" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    
+
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+
+
+
+
+
+                <Label TextColor="White" Grid.Row="0" Grid.Column="0" Text="Saldo a diferir" />
+                <Entry TextColor="White" Grid.Row="0" Grid.Column="1" x:Name="txtSaldoPendiente" IsReadOnly="True"></Entry>
+
+                <Label TextColor="White" Grid.Row="1" Grid.Column="0" Text="Cuota mensual" />
+                    <Entry TextColor="White" Grid.Row="1" Grid.Column="1" x:Name="txtMensualidades" IsReadOnly="True" />
+
+                <Label TextColor="White" Grid.Row="2" Grid.Column="0" Text="Pago Total" />
+                <Entry TextColor="White" Grid.Row="2" Grid.Column="1" x:Name="txtTotal" IsReadOnly="True" />
+            </Grid>
+
+            <Button x:Name="btnCalcular"
+                    Text="Guardar"
+                    Clicked="btnCalcular_Clicked"></Button>
+            <Button x:Name="btnEnviar"
+                    Text="Enviar"
+                    Clicked="btnEnviar_Clicked"></Button>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

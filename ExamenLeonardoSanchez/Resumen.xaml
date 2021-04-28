@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ExamenLeonardoSanchez.Resumen">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#67FFF0">
+            <Label x:Name="lblUser" Text="Usuario Conectado : " />
+            <Label Text="Resumen del registro" HorizontalTextAlignment="Center" TextColor="Blue" FontSize="35"></Label>
+            <Grid BackgroundColor="#8C52FF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  ></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label BackgroundColor="#38B6FF" TextColor="White" Grid.Row="0" Grid.Column="0" Text="Nombre del Estudiante" />
+                <Entry TextColor="White" Grid.Row="0" Grid.Column="1" x:Name="txtEstudiante" IsReadOnly="True"></Entry>
+                <Label  TextColor="White" Grid.Row="1" Grid.Column="0" Text="Valor total a pagar" />
+                <Entry BackgroundColor="#38B6FF" TextColor="White" Grid.Row="1" Grid.Column="1" x:Name="txtTotal" IsReadOnly="True"></Entry>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
